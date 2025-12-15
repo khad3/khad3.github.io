@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=_attach.0">
-<title>Khadley Wong | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khadley Cyle Wong | Portfolio</title>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body class="dark">
-
-<!-- LOADING SCREEN -->
+<!-- LOADER -->
 <div id="loader">
-  <h1>Loading...</h1>
+  <span>Loading Portfolio...</span>
 </div>
 
 <!-- CUSTOM CURSOR -->
@@ -25,78 +22,128 @@
   <h1 class="logo">Khadley</h1>
   <nav>
     <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
-  <button id="themeToggle">🌙</button>
 </header>
 
-<!-- HERO VIDEO -->
+<!-- HERO -->
 <section id="home" class="hero">
-  <video autoplay muted loop>
-    <source src="video.mp4" type="video/mp4">
-  </video>
-
   <div class="hero-content">
-    <h2>Hello, I'm</h2>
+    <img src="images/profile.jpg" class="profile">
+    <h2>Hello, I’m</h2>
     <h1 class="typing"></h1>
-    <p>IT Student • Designer • VA</p>
+    <p>Front-End Web Developer • UI/UX & Graphic Design Enthusiast • IT Student</p>
 
-    <a href="resume.pdf" download class="btn">Download Resume</a>
+    <div class="hero-buttons">
+      <a href="resume.pdf" download class="btn">Download Resume</a>
+      <a href="#projects" class="btn outline">View Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section fade">
+  <h2>About Me</h2>
+  <p>
+    I am an IT student skilled in HTML and CSS, creating visually appealing
+    websites, cool PowerPoint presentations, and graphic designs.
+    I am passionate about UI/UX design and aim to become an IT intern
+    to test and improve my technical and creative skills.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section fade">
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <span>HTML / CSS</span>
+    <div class="bar"><div style="width:85%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>UI/UX Design (Figma)</span>
+    <div class="bar"><div style="width:80%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Graphic Design (Photoshop, Canva)</span>
+    <div class="bar"><div style="width:75%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>PowerPoint Presentations</span>
+    <div class="bar"><div style="width:90%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Basic IT (Crimping, Logic Circuits)</span>
+    <div class="bar"><div style="width:70%"></div></div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="section fade">
-<h2>Projects</h2>
+  <h2>Projects</h2>
 
-<div class="cards">
-  <div class="card" onclick="openModal('Mangagawang Pinoy')">
-    <h3>Mangagawang Pinoy</h3>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Mangagawang Pinoy</h3>
+      <p>
+        Capstone job-matching platform for blue-collar workers and services.
+      </p>
+      <small>
+        Role: Front-End Developer & Project Manager<br>
+        Tools: HTML, CSS, JS, VS Code, Canva<br>
+        <a href="https://manggagawangpinoy.com" target="_blank">Visit Site</a>
+      </small>
+    </div>
+
+    <div class="card">
+      <h3>Tamsakay</h3>
+      <p>
+        FEU Cavite shuttle tracker to monitor driver arrival times.
+      </p>
+      <small>
+        Role: Front-End Developer & Project Manager<br>
+        Tools: HTML, CSS, JS, VS Code, Canva
+      </small>
+    </div>
+
   </div>
-  <div class="card" onclick="openModal('Cybersecurity AI')">
-    <h3>Cybersecurity & AI</h3>
-  </div>
-  <div class="card" onclick="openModal('Design Works')">
-    <h3>Design Portfolio</h3>
-  </div>
-</div>
 </section>
-
-<!-- MODAL -->
-<div id="modal">
-  <div class="modal-content">
-    <span onclick="closeModal()">×</span>
-    <h2 id="modalTitle"></h2>
-    <p>This project demonstrates my technical and creative skills.</p>
-  </div>
-</div>
 
 <!-- GALLERY -->
 <section id="gallery" class="section fade">
-<h2>Gallery</h2>
-<div class="gallery">
-  <img src="images/p1.jpg">
-  <img src="images/p2.jpg">
-  <img src="images/p3.jpg">
-</div>
+  <h2>Gallery</h2>
+
+  <div class="gallery">
+    <img src="images/cert1.jpg">
+    <img src="images/cert2.jpg">
+    <img src="images/design1.jpg">
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section fade">
-<h2>Contact Me</h2>
-
-<form id="contactForm">
-  <input type="text" placeholder="Your Name" name="name" required>
-  <input type="email" placeholder="Your Email" name="email" required>
-  <textarea placeholder="Message" name="message"></textarea>
-  <button class="btn">Send</button>
-</form>
+  <h2>Contact</h2>
+  <p>Email: wongkhadley0@gmail.com</p>
+  <p>GitHub: github.com/khad3</p>
+  <p>
+    LinkedIn:
+    <a href="https://www.linkedin.com/in/khadley-cyle-wong-864370286/" target="_blank">
+      View Profile
+    </a>
+  </p>
 </section>
 
 <footer>
-<p>© 2025 Khadley Wong</p>
+  <p>© 2025 Khadley Cyle Wong</p>
 </footer>
 
 <script src="script.js"></script>
