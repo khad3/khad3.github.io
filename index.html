@@ -1,76 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khadley | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=_attach.0">
+<title>Khadley Wong | Portfolio</title>
 
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
-<body>
 
-  <!-- NAVBAR -->
-  <header>
-    <h1 class="logo">Khadley</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<body class="dark">
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <h1>Loading...</h1>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
+
+<header>
+  <h1 class="logo">Khadley</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button id="themeToggle">🌙</button>
+</header>
+
+<!-- HERO VIDEO -->
+<section id="home" class="hero">
+  <video autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
     <h2>Hello, I'm</h2>
-    <h1><span class="typing"></span></h1>
-    <p>IT Student | Graphic Designer | Virtual Assistant</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </section>
+    <h1 class="typing"></h1>
+    <p>IT Student • Designer • VA</p>
 
-  <!-- ABOUT -->
-  <section id="about" class="section fade-in">
-    <h2>About Me</h2>
-    <p>
-      I am an IT student with certifications in Graphic Design and Virtual Assistance.
-      I enjoy creating clean designs, interactive websites, and tech solutions.
-    </p>
-  </section>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section fade-in">
-    <h2>Projects</h2>
+<!-- PROJECTS -->
+<section id="projects" class="section fade">
+<h2>Projects</h2>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Mangagawang Pinoy</h3>
-        <p>Capstone system for Filipino workers and employers.</p>
-      </div>
+<div class="cards">
+  <div class="card" onclick="openModal('Mangagawang Pinoy')">
+    <h3>Mangagawang Pinoy</h3>
+  </div>
+  <div class="card" onclick="openModal('Cybersecurity AI')">
+    <h3>Cybersecurity & AI</h3>
+  </div>
+  <div class="card" onclick="openModal('Design Works')">
+    <h3>Design Portfolio</h3>
+  </div>
+</div>
+</section>
 
-      <div class="card">
-        <h3>Cybersecurity Presentation</h3>
-        <p>AI & ChatGPT risks and benefits in cybersecurity.</p>
-      </div>
+<!-- MODAL -->
+<div id="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()">×</span>
+    <h2 id="modalTitle"></h2>
+    <p>This project demonstrates my technical and creative skills.</p>
+  </div>
+</div>
 
-      <div class="card">
-        <h3>Design Portfolio</h3>
-        <p>Graphic designs and branding projects.</p>
-      </div>
-    </div>
-  </section>
+<!-- GALLERY -->
+<section id="gallery" class="section fade">
+<h2>Gallery</h2>
+<div class="gallery">
+  <img src="images/p1.jpg">
+  <img src="images/p2.jpg">
+  <img src="images/p3.jpg">
+</div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section fade-in">
-    <h2>Contact Me</h2>
-    <p>Email: yourname@email.com</p>
-    <p>GitHub: github.com/yourusername</p>
-  </section>
+<!-- CONTACT -->
+<section id="contact" class="section fade">
+<h2>Contact Me</h2>
 
-  <footer>
-    <p>© 2025 Khadley Wong</p>
-  </footer>
+<form id="contactForm">
+  <input type="text" placeholder="Your Name" name="name" required>
+  <input type="email" placeholder="Your Email" name="email" required>
+  <textarea placeholder="Message" name="message"></textarea>
+  <button class="btn">Send</button>
+</form>
+</section>
 
-  <script src="script.js"></script>
+<footer>
+<p>© 2025 Khadley Wong</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
