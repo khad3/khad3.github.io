@@ -10,15 +10,15 @@
 // After creating an account, get your keys from the dashboard
 const EMAILJS_CONFIG = {
     enabled: false, // Set to true to use EmailJS
-    publicKey: 'tzp1o0mIortZN5uvb', // Replace with your EmailJS public key
-    serviceId: 'bdaywish', // Replace with your service ID
-    templateId: 'Khadley' // Replace with your template ID
+    publicKey: 'YOUR_EMAILJS_PUBLIC_KEY', // Replace with your EmailJS public key
+    serviceId: 'YOUR_SERVICE_ID', // Replace with your service ID
+    templateId: 'YOUR_TEMPLATE_ID' // Replace with your template ID
 };
 
 // METHOD 2: Mailto (Opens default email client)
 const MAILTO_CONFIG = {
     enabled: true, // Set to true to use mailto
-    email: 'wongkhadley0@gmail.com', // Replace with your email
+    email: 'your-email@example.com', // Replace with your email
     subject: 'Birthday Wish from Yeobo'
 };
 
@@ -415,9 +415,18 @@ unmuteBtn.addEventListener('click', () => {
 // ========================================
 // MODAL FUNCTIONALITY
 // ========================================
-wishBtn.addEventListener('click', () => {
+wishBtn.addEventListener('click', (e) => {
+    console.log('Button clicked!'); // Debug log
+    e.stopPropagation(); // Prevent event bubbling
     wishModal.classList.remove('hidden');
 });
+
+// Ensure button is clickable after a delay
+setTimeout(() => {
+    wishBtn.style.pointerEvents = 'auto';
+    wishBtn.style.cursor = 'pointer';
+    console.log('Button is now clickable');
+}, 3000);
 
 modalClose.addEventListener('click', () => {
     wishModal.classList.add('hidden');
@@ -496,6 +505,15 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         startFireworkAnimation();
     }, 500);
+});
+
+// ========================================
+// DEBUG: Check what element is blocking clicks
+// ========================================
+document.addEventListener('click', (e) => {
+    console.log('Clicked element:', e.target);
+    console.log('Element classes:', e.target.className);
+    console.log('Element tag:', e.target.tagName);
 });
 
 // ========================================

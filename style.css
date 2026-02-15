@@ -10,7 +10,7 @@
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
     overflow-x: hidden;
-    background: linear-gradient(135deg, #ff78ed 0%, #c200b8 50%, #ff78ed 100%);
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #2d1347 100%);
     position: relative;
     min-height: 100vh;
 }
@@ -106,13 +106,14 @@ body::before {
    ======================================== */
 .main-content {
     position: relative;
-    z-index: 10;
+    z-index: 200;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     transition: opacity 1s ease;
+    pointer-events: none;
 }
 
 .main-content.hidden {
@@ -147,6 +148,7 @@ body::before {
     animation: floatPhoto 20s ease-in-out infinite;
     transition: transform 0.3s ease;
     background: linear-gradient(135deg, #ffd700 0%, #ff69b4 100%);
+    pointer-events: auto;
 }
 
 .floating-photo:hover {
@@ -176,7 +178,7 @@ body::before {
    ======================================== */
 .center-message {
     position: relative;
-    z-index: 100;
+    z-index: 500;
     text-align: center;
     padding: 40px;
     background: rgba(0, 0, 0, 0.3);
@@ -289,7 +291,7 @@ body::before {
     animation: buttonGlow 2s ease-in-out infinite;
     opacity: 0;
     animation: fadeInScale 1s ease forwards 1s, buttonGlow 2s ease-in-out infinite;
-    z-index: 150;
+    z-index: 600;
     pointer-events: auto;
 }
 
