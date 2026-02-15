@@ -10,9 +10,9 @@
 // After creating an account, get your keys from the dashboard
 const EMAILJS_CONFIG = {
     enabled: false, // Set to true to use EmailJS
-    publicKey: 'YOUR_EMAILJS_PUBLIC_KEY', // Replace with your EmailJS public key
-    serviceId: 'YOUR_SERVICE_ID', // Replace with your service ID
-    templateId: 'YOUR_TEMPLATE_ID' // Replace with your template ID
+    publicKey: 'tzp1o0mIortZN5uvb', // Replace with your EmailJS public key
+    serviceId: 'bdaywish', // Replace with your service ID
+    templateId: 'Khadley' // Replace with your template ID
 };
 
 // METHOD 2: Mailto (Opens default email client)
