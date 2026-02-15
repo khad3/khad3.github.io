@@ -18,7 +18,7 @@ const EMAILJS_CONFIG = {
 // METHOD 2: Mailto (Opens default email client)
 const MAILTO_CONFIG = {
     enabled: true, // Set to true to use mailto
-    email: 'your-email@example.com', // Replace with your email
+    email: 'wongkhadley0@gmail.com', // Replace with your email
     subject: 'Birthday Wish from Yeobo'
 };
 
