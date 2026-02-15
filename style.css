@@ -177,7 +177,6 @@ body::before {
 .center-message {
     position: relative;
     z-index: 100;
-    pointer-events: auto;
     text-align: center;
     padding: 40px;
     background: rgba(0, 0, 0, 0.3);
@@ -187,6 +186,7 @@ body::before {
     box-shadow: 
         0 20px 60px rgba(0, 0, 0, 0.5),
         0 0 40px rgba(255, 215, 0, 0.2);
+    pointer-events: auto;
 }
 
 .birthday-title {
@@ -243,6 +243,7 @@ body::before {
     height: 100%;
     pointer-events: none;
     z-index: -1;
+    user-select: none;
 }
 
 .sparkle {
@@ -272,8 +273,6 @@ body::before {
 .wish-button {
     margin-top: 30px;
     padding: 18px 40px;
-    z-index: 150;
-    pointer-events: auto;
     font-size: 1.3rem;
     font-weight: bold;
     color: white;
@@ -290,6 +289,8 @@ body::before {
     animation: buttonGlow 2s ease-in-out infinite;
     opacity: 0;
     animation: fadeInScale 1s ease forwards 1s, buttonGlow 2s ease-in-out infinite;
+    z-index: 150;
+    pointer-events: auto;
 }
 
 .wish-button::before {
@@ -337,11 +338,11 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    user-select: none;
     width: 100%;
     height: 100%;
     pointer-events: none;
     z-index: 15;
+    user-select: none;
 }
 
 .heart {
