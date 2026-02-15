@@ -10,7 +10,7 @@
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
     overflow-x: hidden;
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #ff78ed 100%);
+    background: linear-gradient(135deg, #ff78ed 0%, #c200b8 50%, #ff78ed 100%);
     position: relative;
     min-height: 100vh;
 }
