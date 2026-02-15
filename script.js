@@ -30,7 +30,7 @@ const PHOTOS = [
     'photo3.jpg',
     'photo4.jpg',
     'photo5.jpg',
-    'photo6.jpg'
+    'poto6.jpg'
 ];
 
 // ========================================
