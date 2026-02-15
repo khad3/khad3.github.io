@@ -463,6 +463,18 @@ function createSparkles() {
 // ========================================
 // BACKGROUND MUSIC
 // ========================================
+// Try to autoplay on page load
+window.addEventListener('load', () => {
+    bgMusic.play().then(() => {
+        unmuteBtn.classList.add('playing');
+        unmuteBtn.querySelector('.unmute-text').textContent = 'Music playing';
+        console.log('Music started automatically');
+    }).catch(err => {
+        console.log('Autoplay blocked by browser. User needs to click to play.', err);
+        // Keep the button visible for manual play
+    });
+});
+
 unmuteBtn.addEventListener('click', () => {
     if (bgMusic.paused) {
         bgMusic.play().then(() => {
@@ -474,7 +486,7 @@ unmuteBtn.addEventListener('click', () => {
     } else {
         bgMusic.pause();
         unmuteBtn.classList.remove('playing');
-        unmuteBtn.querySelector('.unmute-text').textContent = 'Tap to unmute';
+        unmuteBtn.querySelector('.unmute-text').textContent = 'Tap to play';
     }
 });
 

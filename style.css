@@ -46,7 +46,7 @@ body::before {
 }
 
 /* ========================================
-   UNMUTE BUTTON
+   PLAY/PAUSE MUSIC BUTTON
    ======================================== */
 .unmute-btn {
     position: fixed;
@@ -76,6 +76,7 @@ body::before {
 
 .unmute-btn.playing {
     background: rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.8);
 }
 
 .music-icon {
