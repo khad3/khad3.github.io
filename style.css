@@ -176,7 +176,8 @@ body::before {
    ======================================== */
 .center-message {
     position: relative;
-    z-index: 20;
+    z-index: 100;
+    pointer-events: auto;
     text-align: center;
     padding: 40px;
     background: rgba(0, 0, 0, 0.3);
@@ -271,6 +272,8 @@ body::before {
 .wish-button {
     margin-top: 30px;
     padding: 18px 40px;
+    z-index: 150;
+    pointer-events: auto;
     font-size: 1.3rem;
     font-weight: bold;
     color: white;
@@ -334,6 +337,7 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
+    user-select: none;
     width: 100%;
     height: 100%;
     pointer-events: none;
